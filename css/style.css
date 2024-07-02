@@ -12,9 +12,73 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  background: black;
+  color: white;
   font-size: 1em;
   line-height: 1.4;
+}
+
+#header {
+  background: black;
+  width: 1200px;
+  height: 100px;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 0;
+
+  border-right-color: white;
+  border-right-width: 5px;
+  border-right-style: solid;
+
+  border-bottom-color: white;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+
+  border-top-color: white;
+  border-top-width: 5px;
+  border-top-style: solid;
+
+  display: flex;
+
+}
+
+#initials {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+#about {
+  text-align: center;
+  margin-top: 40px;
+
+  border: dotted 1px white;
+
+  /*Vertical*/
+  background-image: linear-gradient(black 33%, rgba(255,255,255,0) 0%);
+  background-position: right;
+  background-size: 1px 3px;
+  background-repeat: repeat-y;
+}
+
+#skills {
+  text-align: center;
+  margin-top: 40px;
+
+  border: dotted 1px white;
+
+  /*Vertical*/
+  background-image: linear-gradient(black 33%, rgba(255,255,255,0) 0%);
+  background-position: right;
+  background-size: 1px 3px;
+  background-repeat: repeat-y;
+}
+
+
+.twoPart {
+  width: 100%;
+  overflow: hidden;
 }
 
 /*

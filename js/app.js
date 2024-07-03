@@ -39,10 +39,12 @@ function filterProjects(projects) {
 async function populateProjects() {
   const projectsOne = document.getElementById('projectsOne');
   const projectsTwo = document.getElementById('projectsTwo');
+  const projectsThree = document.getElementById('projectsThree');
+  const projectsFour = document.getElementById('projectsFour');
   let projects = await fetchProjects();
   projects = filterProjects(projects);
 
-  const halfLength = Math.ceil(projects.length / 2);
+  const quarterLength = Math.ceil(projects.length / 4);
 
   for (let index = 0; index < projects.length; index++) {
     const project = projects[index];
@@ -53,28 +55,22 @@ async function populateProjects() {
     projectDiv.setAttribute('onclick', `window.open('${project.html_url}', '_blank');`);
 
     const projectImage = document.createElement('img');
-    projectImage.src = project.owner.avatar_url; // Assuming you want to use owner's avatar as preview image
+    projectImage.src = "https://github-readme-stats.vercel.app/api/pin/?username=" + username + "&repo=" + project.name + "&theme=aura_dark";
     projectImage.alt = 'Project';
+    projectImage.height = 130;
     projectImage.classList.add('projectImage');
     projectDiv.appendChild(projectImage);
 
-    const initialsDiv = document.createElement('div');
-    initialsDiv.classList.add('initials');
 
-    const titleHeading = document.createElement('h2');
-    titleHeading.textContent = project.name;
-    initialsDiv.appendChild(titleHeading);
-
-    const descriptionPara = document.createElement('p');
-    descriptionPara.textContent = project.description || 'No description provided';
-    initialsDiv.appendChild(descriptionPara);
-
-    projectDiv.appendChild(initialsDiv);
-
-    if (index < halfLength) {
+    if (index < quarterLength) {
       projectsOne.appendChild(projectDiv);
-    } else {
+    } else if(index < quarterLength * 2) {
       projectsTwo.appendChild(projectDiv);
+    } else if(index < quarterLength * 3) {
+      projectsThree.appendChild(projectDiv);
+    } else {
+      projectsFour.appendChild(projectDiv);
+
     }
   }
 }
@@ -104,7 +100,7 @@ async function marqueeStuff() {
 
 
     let additionalContent = '';
-    const repetitions = Math.floor(screenWidth / 1000);
+    const repetitions = Math.floor(screenWidth / 500);
     for (let i = 0; i < repetitions + 1; i++) {
       additionalContent += marquee.innerHTML;
     }
@@ -119,4 +115,8 @@ async function marqueeStuff() {
 
 document.getElementById('aboutButton').addEventListener('click', function() {
   document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('projectButton').addEventListener('click', function() {
+  document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 });

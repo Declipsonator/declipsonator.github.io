@@ -35,7 +35,7 @@
       <div class="headerText" id="projectButton">
         <h1>PROJECTS</h1>
       </div>
-      <div class="headerText">
+      <div class="headerText" id="newsButton">
         <h1>NEWS</h1>
       </div>
       <div class="headerText">
@@ -122,7 +122,6 @@
           <div class="skill">HTML</div>
           <div class="skill">CSS</div>
           <div class="skill">Artificial Intelligence</div>
-          <div class="skill">Neural Network Visualization</div>
           <div class="skill">Software Development</div>
           <div class="skill">Web Development</div>
           <div class="skill">Minecraft Modding</div>
@@ -177,7 +176,39 @@
       </div>
     </div>
   </div>
-
+  <hr>
+  <div id="news">
+    <h1 class="bigTitle">NEWS</h1>
+    <p class="sadNoNews">No news at this time ):</p>
+  </div>
+  <hr>
+  <div id="contact">
+    <h1 class="bigTitle">CONTACT</h1>
+    <div class="twoPart">
+      <div id="contactInfo">
+        <p>Email: <a href="mailto:jackson@jacksonhickey.tech">jackson@jacksonhickey.tech</a></p>
+        <p>GitHub: <a href="https://github.com/declipsonator" target="_blank">Declipsonator</a></p>
+      </div>
+      <div class="verticalLine"></div>
+      <div id="contactForm">
+        <form action="https://formspree.io/f/mblrjkal" method="POST">
+          <div class="input">
+            <label class="contactLabel" for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+          </div>
+          <div class="input">
+            <label class="contactLabel" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.net">
+          </div>
+          <div class="input">
+            <label class="contactLabel" for="message" >Message:</label>
+            <textarea id="message" name="message" placeholder="I love you" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="js/app.js"></script>
 
 </body>

@@ -120,3 +120,7 @@ document.getElementById('aboutButton').addEventListener('click', function() {
 document.getElementById('projectButton').addEventListener('click', function() {
   document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 });
+
+document.getElementById('newsButton').addEventListener('click', function() {
+  document.getElementById('news').scrollIntoView({ behavior: 'smooth' });
+})

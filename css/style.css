@@ -328,6 +328,25 @@ textarea, select, input {
   border-top: 1px solid white;
 }
 
+button {
+  background-color: #4d4d4d;
+  border: none;
+  border-radius: 5px;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-weight: 400;
+
+}
+
+button:hover {
+  background-color: #3c3c3c;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 
 @keyframes marquee {
   0% {

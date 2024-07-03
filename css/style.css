@@ -16,7 +16,17 @@ html {
   color: white;
   font-size: 1em;
   line-height: 1.4;
+
 }
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 
 #header {
   background: black;
@@ -40,6 +50,97 @@ html {
 
   display: flex;
 
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent horizontal scroll bar */
+}
+
+.bigName {
+  font-size: 200px;
+  margin: 0;
+  line-height: 180px
+}
+
+
+.marqueeInside {
+  display: flex;
+}
+
+.marqueeTwoPart {
+  display: inline-block;
+  padding-right: 20px; /* Adjust spacing between the items as needed */
+  text-align: justify;
+  padding-top: 0;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+}
+
+.smallerText {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 40px;
+  line-height: 38px;
+
+}
+.marqueeOpposite {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee .marqueeInside {
+  animation: marquee 15s linear infinite;
+}
+
+.marqueeOpposite .marqueeInside {
+  animation: marqueeOpposite 13s linear infinite;
+}
+
+.marqueeTwoPart p {
+  color: #555;
+  min-width: 100%;
+  text-align-last: justify;
+  text-justify: auto;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marqueeOpposite:hover .marqueeInside {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeOpposite {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee:hover .marqueeInside {
+  animation-play-state: paused;
 }
 
 #initials {
@@ -73,6 +174,10 @@ html {
   background-position: right;
   background-size: 1px 3px;
   background-repeat: repeat-y;
+}
+
+.marqueeInside {
+  display: inline-block;
 }
 
 

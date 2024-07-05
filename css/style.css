@@ -366,6 +366,7 @@ body {
 .bigTitle {
   font-size: 70px;
   margin: 0;
+  padding-right: 10px;
   line-height: 160px;
   font-weight: bolder;
   font-style: italic;

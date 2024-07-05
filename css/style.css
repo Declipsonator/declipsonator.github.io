@@ -91,47 +91,25 @@ body {
   padding: 50px;
 }
 
-@media (max-width: 1200px) {
-  #header {
-    width: 95%;
-  }
-  #headerLinks {
-    font-size: 9px;
-    margin-left: 0;
-    padding-left: 5px;
-    padding-right: 10px;
-  }
-  .headerText {
-    margin: 10px;
-  }
-
-  #initials {
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    padding: 0;
-  }
-
-  #initials {
-    width: 50px;
-    height: 50px;
-  }
+.bigName {
+  font-size: 200px;
+  margin: 0;
+  line-height: 160px
 }
 
-@media (min-width: 600px) {
-  #headerLinks {
-    padding: 50px;
-  }
+.smallerText {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 40px;
+  line-height: 44px;
 }
 
-::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: yellow;
-}
-
-::selection {
-  color: black;
-  background: yellow;
+.twoPart {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  margin: auto;
+  justify-content: center; /* Centers items horizontally */
 }
 
 #about {
@@ -147,6 +125,46 @@ body {
   border-right-width: 1px;
 }
 
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.skill {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 16px;
+  margin: 7px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#about p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+#about a {
+  color: grey;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#about a:hover {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.skill:hover {
+  background-color: lightgray;
+}
+
 #skills {
   width: 50%;
   max-width: 500px;
@@ -156,13 +174,187 @@ body {
   text-align: center;
 }
 
-.twoPart {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  margin: auto;
-  justify-content: center; /* Centers items horizontally */
+.twoPartMobile {
+  display: none;
+
 }
+
+#message {
+  width: 500px;
+  height: 300px;
+
+}
+
+.contactLabel {
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input input {
+  width: 300px;
+  min-height: 25px;
+  place-items:center;
+  position: absolute;
+  top: 50%;
+  margin-left: 100px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input {
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+
+.projectImage {
+  height: 130px;
+}
+
+@media (max-width: 1200px) {
+  #header {
+    width: 95%;
+  }
+  #headerLinks {
+    font-size: 9px;
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+  .headerText {
+  }
+
+  #initials {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #initials {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bigName {
+    font-size: 100px;
+    margin: 0;
+    line-height: 80px
+  }
+
+  .smallerText {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .projectImage {
+    height: 70px;
+  }
+}
+
+@media (max-width: 1020px) {
+
+  .twoPart {
+    width: 100%;
+    display: block;
+    text-align: center;
+
+  }
+
+  .twoPartMobile {
+    display: block;
+  }
+
+  #about {
+    border-style: none;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+  }
+
+  #skills {
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+  }
+
+  .verticalLine {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  #headerLinks {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  #statsImg {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 700px) {
+  #contactInfo p {
+    font-size: 20px;
+  }
+
+  #message {
+    width: 80%;
+    height: 200px;
+  }
+
+  .contactLabel {
+    width: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .input input {
+    width: 150px;
+    min-height: 25px;
+    place-items:center;
+    position: absolute;
+    top: 50%;
+    margin-left: 60px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .input {
+    align-items: center;
+    position: relative;
+    display: flex;
+  }
+
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: yellow;
+}
+
+::selection {
+  color: black;
+  background: yellow;
+}
+
+
 
 
 .headerText:hover {
@@ -191,12 +383,6 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-.bigName {
-  font-size: 200px;
-  margin: 0;
-  line-height: 160px
-}
-
 
 .marqueeInside {
   display: flex;
@@ -214,13 +400,6 @@ html::-webkit-scrollbar {
   overflow: hidden;
   display: flex;
   white-space: nowrap;
-}
-
-.smallerText {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 40px;
-  line-height: 44px;
 }
 
 .sadNoNews {
@@ -262,28 +441,6 @@ html::-webkit-scrollbar {
   text-decoration: underline;
 }
 
-.contactLabel {
-  width: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.input input {
-  width: 300px;
-  min-height: 25px;
-  place-items:center;
-  position: absolute;
-  top: 50%;
-  margin-left: 100px;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.input {
-  align-items: center;
-  position: relative;
-  display: flex;
-}
 
 input,
 textarea,
@@ -333,11 +490,7 @@ textarea, select, input {
   animation: marquee var(--rand)linear infinite;
 }
 
-#message {
-  width: 500px;
-  height: 300px;
 
-}
 
 .marqueeOpposite .marqueeInside {
   --rand: 15;
@@ -417,44 +570,6 @@ button:hover {
 
 
 
-.skill-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
-.skill {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 8px 16px;
-  margin: 7px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#about p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-#about a {
-  color: grey;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#about a:hover {
-  text-decoration: underline;
-  font-style: italic;
-}
-
-.skill:hover {
-  background-color: lightgray;
-}
 
 /*
  * Remove text-shadow in selection highlight:
